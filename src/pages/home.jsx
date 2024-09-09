@@ -1,14 +1,17 @@
+import { Fragment } from "react";
+import Home from "../components/fragments/Home";
 import AuthLayout from "../components/layout/AuthLayout";
 import Navbar from "../components/layout/Navbar";
+import "../style/PageStyle/home.css";
 
 const HomePage = () => {
   return (
-    <>
+    <Fragment>
       <Navbar />
-      <AuthLayout>
-        <h1>Hello World</h1>
+      <AuthLayout classNameSection="home" classNameMain="home-content">
+        <Home />
       </AuthLayout>
-    </>
+    </Fragment>
   );
 };
 
