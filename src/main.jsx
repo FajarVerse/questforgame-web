@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./style/reset.css";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ReviewPage from "./pages/review";
@@ -10,7 +11,7 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <ContactPage />,
+      element: <HomePage />,
     },
     {
       path: "/home",

@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .logo h1 {
+  font-size: 1.7rem;
+  color: #e0e0e0;
+}
+
+.navbar .logo h1 span {
+  color: #00ffff;
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar .navbar-menu .navbar-list {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar .navbar-menu .navbar-list li {
+  position: relative;
+  z-index: 11;
+}
+
+.navbar .navbar-menu .navbar-list li a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e0e0e0;
+  z-index: 11;
+  transition: 0.3s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar .navbar-menu .navbar-list li:hover a{
+  color: #1c1c1c;
+}
+
+.navbar .navbar-menu .navbar-list li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  background-color: #00ffff;
+  transform: skew(-15deg);
+  z-index: -10;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar .navbar-menu .navbar-list li:hover::before {
+  width: 120%;
+}
+
+.navbar .navbar-menu .navbar-eks a {
+  color: #e0e0e0;
+}
