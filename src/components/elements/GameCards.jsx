@@ -1,3 +1,4 @@
+import Image from "./Image";
 import Links from "./Links";
 
 const GameCard = (props) => {
@@ -15,7 +16,7 @@ const GameCard = (props) => {
 const Header = (props) => {
   const { img, alt } = props;
 
-  return <img src={img} alt={alt} />;
+  return <Image src={img} alt={alt} />;
 };
 
 const Body = (props) => {
