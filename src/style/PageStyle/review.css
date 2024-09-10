@@ -27,7 +27,7 @@
 }
 
 .row-content {
-  padding: 0.5rem 5rem 2rem;
+  padding: 0.5rem 2rem 2rem;
 }
 
 .row-content .card-row {
@@ -38,7 +38,7 @@
 }
 
 .row-content .card-row .card {
-  width: 26rem;
+  width: 24rem;
   height: 13.5rem;
   display: flex;
   gap: 1.5rem;
