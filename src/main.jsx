@@ -6,6 +6,7 @@ import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ReviewPage from "./pages/review";
 import ContactPage from "./pages/contact";
+import Detail from "./pages/detailgame";
 
 const router = createBrowserRouter(
   [
@@ -28,6 +29,10 @@ const router = createBrowserRouter(
     {
       path: "/contact",
       element: <ContactPage />,
+    },
+    {
+      path: "/detail-game/:id",
+      element: <Detail />,
     },
   ],
   { basename: "/questforgame-web/" }

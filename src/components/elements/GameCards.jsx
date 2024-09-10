@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const GameCard = (props) => {
-  const { id, children } = props;
+  const { children, id } = props;
 
   return (
     <>
