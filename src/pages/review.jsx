@@ -1,5 +1,11 @@
+import Navbar from "../components/layout/Navbar";
+
 const ReviewPage = () => {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default ReviewPage;

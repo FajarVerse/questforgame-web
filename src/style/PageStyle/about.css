@@ -1,0 +1,156 @@
+.about-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.about-slide .slide {
+  width: 15rem;
+  height: 20rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 15px;
+  padding: 4.5rem;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 0 5px rgba(0, 241, 254, 0.6);
+  transition: 0.5s ease-in-out;
+}
+
+.about-slide .slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(28, 28, 28, 0.447);
+  z-index: -99;
+}
+
+.about-slide .slide:nth-child(3)::after,
+.about-slide .slide:nth-child(4)::after,
+.about-slide .slide:nth-child(5)::after,
+.about-slide .slide:nth-child(6)::after {
+  background-color: transparent;
+}
+
+.about-slide .slide:nth-child(1),
+.about-slide .slide:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+}
+
+.about-slide .slide-1 {
+  background: url("../../assets/about-slide-img/slide-1.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide-2 {
+  background: url("../../assets/about-slide-img/slide-2.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide-3 {
+  background: url("../../assets/about-slide-img/slide-3.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide-4 {
+  background: url("../../assets/about-slide-img/slide-4.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide-5 {
+  background: url("../../assets/about-slide-img/slide-5.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide-6 {
+  background: url("../../assets/about-slide-img/slide-6.jpg") center/cover
+    no-repeat;
+}
+
+.about-slide .slide:nth-child(3) {
+  left: 60%;
+}
+
+.about-slide .slide:nth-child(4) {
+  left: calc(60% + 16rem);
+}
+
+.about-slide .slide:nth-child(5) {
+  left: calc(60% + 32rem);
+}
+
+.about-slide .slide:nth-child(n + 6) {
+  left: calc(60% + 48rem);
+  opacity: 1;
+}
+
+.about-slide .slide .slide-content {
+  width: 45rem;
+  margin-top: -5rem;
+  display: none;
+}
+
+.about-slide .slide:nth-child(2) .slide-content {
+  display: block;
+}
+
+.about-slide .slide .slide-content .about-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #00ffff;
+  opacity: 0;
+  animation: animated 0.7s ease-in-out 0.6s 1 forwards;
+}
+
+.about-slide .slide .slide-content .about-title span {
+  color: #e0e0e0;
+}
+
+.about-slide .slide .slide-content .about-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e0e0e0;
+  margin-top: 0.1rem;
+  animation: animated 0.7s ease-in-out 0.6s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes animated {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+}
+
+.arrow-btn {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  gap: 3rem;
+  z-index: 999;
+}
+
+.arrow-btn a {
+  font-size: 2rem;
+  color: #00ffff;
+}

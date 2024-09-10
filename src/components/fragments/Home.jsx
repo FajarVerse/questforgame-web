@@ -1,7 +1,6 @@
 import Description from "../elements/Description";
 import Headers from "../elements/Headers";
 import SubHeaders from "../elements/SubHeaders";
-import "../../style/PageStyle/home.css";
 
 const Home = () => {
   return (
