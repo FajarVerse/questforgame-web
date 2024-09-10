@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import Links from "./Links";
 
 const GameCard = (props) => {
   const { children, id } = props;
 
   return (
     <>
-      <Link to={`/detail-game/${id}`}>
+      <Links url={`/detail-game/${id}`}>
         <div className="card">{children}</div>
-      </Link>
+      </Links>
     </>
   );
 };
