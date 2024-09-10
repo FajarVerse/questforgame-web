@@ -1,0 +1,129 @@
+:root {
+  --rating: 0;
+}
+
+.genre-nav {
+  display: flex;
+  gap: 0.3rem;
+  padding: 2.5rem 0;
+}
+
+.genre-nav a {
+  width: auto;
+  height: 1.5rem;
+  padding: 1rem 1.5rem;
+  line-height: 0;
+  transform: skewx(15deg);
+  background-color: #00ffff;
+}
+
+.genre-nav a span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-decoration: none;
+  display: inline-block;
+  transform: skewX(-15deg);
+}
+
+.row-content {
+  padding: 0.5rem 5rem 2rem;
+}
+
+.row-content .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 0.5rem;
+}
+
+.row-content .card-row .card {
+  width: 26rem;
+  height: 13.5rem;
+  display: flex;
+  gap: 1.5rem;
+  border-radius: 7px;
+  background-color: transparent;
+  position: relative;
+  box-shadow: 0 0 3px rgba(255, 251, 251, 0.812);
+}
+
+.row-content .card-row .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 20;
+  transition: 0.3s ease-in-out;
+}
+
+.row-content .card-row .card:hover::before {
+  background-color: rgba(0, 0, 0, 0.163);
+  backdrop-filter: blur(0.5px);
+}
+
+.row-content .card-row .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  position: relative;
+  z-index: 10;
+}
+
+.row-content .card-row .card .title_and_rate {
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 25;
+  padding: 0 1rem;
+}
+
+.row-content .card-row .card .title_and_rate h2 {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.rating .layer-one {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white;
+  background: linear-gradient(
+    to left,
+    #02bcbc 0%,
+    #02bcbc calc(100% * var(--rating) / 10),
+    #ffffff calc(100% * var(--rating) / 10),
+    #ffffff 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating .layer-one .layer-two {
+  width: 84%;
+  height: 84%;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.rating .layer-one .layer-two p {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.4rem;
+  z-index: 15;
+}
