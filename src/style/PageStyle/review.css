@@ -5,7 +5,7 @@
 .genre-nav {
   display: flex;
   gap: 0.3rem;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
 }
 
 .genre-nav a {
@@ -13,7 +13,7 @@
   height: 1.5rem;
   padding: 1rem 1.5rem;
   line-height: 0;
-  transform: skewx(15deg);
+  transform: skewx(7deg);
   background-color: #00ffff;
 }
 
@@ -23,18 +23,14 @@
   color: #1c1c1c;
   text-decoration: none;
   display: inline-block;
-  transform: skewX(-15deg);
-}
-
-.row-content {
-  padding: 0.5rem 2rem 2rem;
+  transform: skewX(-7deg);
 }
 
 .row-content .card-row {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  padding: 0 0.5rem;
+  padding: 0 3rem;
 }
 
 .row-content .card-row .card {
