@@ -1,7 +1,7 @@
 import Navbar from "../components/layout/Navbar";
 import Authlayout from "../components/layout/AuthLayout";
 import Review from "../components/fragments/Review";
-import "../style/PageStyle/review.css"
+import "../style/PageStyle/review.css";
 
 const ReviewPage = () => {
   return (

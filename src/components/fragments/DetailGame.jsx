@@ -7,11 +7,16 @@ import {
 import { Frown, Link2, Smile } from "react-feather";
 import { format } from "date-fns";
 import DetailGames from "../elements/DetailGame/DetailGames";
+import {
+  useScreenshot,
+  useScreenshotDispatch,
+} from "../../context/ScreenshotGame";
 
 const DetailGame = () => {
   const { id } = useParams();
   const [detailGame, setDetailGame] = useState({});
-  const [gameImage, setGameImage] = useState([]);
+  const dispatch = useScreenshotDispatch();
+  const { image } = useScreenshot();
 
   useEffect(() => {
     getDetailGame(id, (data) => {
@@ -21,9 +26,14 @@ const DetailGame = () => {
 
   useEffect(() => {
     getScreenshotGame(id, (data) => {
-      setGameImage(data.results);
+      dispatch({
+        type: "GET",
+        payload: {
+          image: data.results,
+        },
+      });
     });
-  }, [id]);
+  });
 
   return (
     <>
@@ -34,8 +44,8 @@ const DetailGame = () => {
         <div className="body">
           <DetailGames.BodyLeftContent
             img={
-              gameImage &&
-              gameImage.slice(0, 2).map((img) => (
+              image &&
+              image.slice(0, 2).map((img) => (
                 <div className="border" key={img.id}>
                   <img src={img.image} />{" "}
                 </div>

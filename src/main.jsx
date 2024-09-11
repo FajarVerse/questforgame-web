@@ -7,6 +7,7 @@ import AboutPage from "./pages/about";
 import ReviewPage from "./pages/review";
 import ContactPage from "./pages/contact";
 import Detail from "./pages/detailgame";
+import { ScreenshootGameProvider } from "./context/ScreenshotGame";
 
 const router = createBrowserRouter(
   [
@@ -40,6 +41,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ScreenshootGameProvider>
+      <RouterProvider router={router} />
+    </ScreenshootGameProvider>
   </StrictMode>
 );
